@@ -11,3 +11,71 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   padding: clamp(20px, 5vw, 50px) 20px 20px;
 }
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.imgLogo {
+  width: 15%;
+  min-width: 100px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.boldy {
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+input {
+  width: 40%;
+  min-width: 200px;
+  max-width: 450px;
+  padding: 10px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.results {
+  margin-top: 50px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  margin: auto;
+  gap: 2px;
+}
+
+.siteName {
+  color: #0000ee;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.adress {
+  color: #1f7634;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.description {
+  text-align: justify;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
