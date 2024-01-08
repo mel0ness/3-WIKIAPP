@@ -13,16 +13,16 @@
   <div class="logo"><img src="./ressources/wiki-logo.png" alt="Logo wiki" class="imgLogo"></div>
   <div class="title">Recherche <span class="boldy">Wikipedia</span></div>
   <form method="get" action="" id="form">
-    <input type="search" class="search" placeholder="Recherche">
+    <input type="search" class="search" placeholder="Recherche" id="search">
   </form>
-  <div class="results">
-    <div class="result">
-      <a href="" class="siteName">Site Name</a>
-      <div class="adress">http://adresse.com</div>
-      <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam necessitatibus rerum sunt
-        suscipit officia quia, eaque sit earum ex quisquam neque molestias, cum dicta cumque nemo optio? Neque, dolorum
-        vitae.</div>
-    </div>
+  <div class="loader" id="loader">
+    <div class="dot dot1"></div>
+    <div class="dot dot2"></div>
+    <div class="dot dot3"></div>
+  </div>
+  <div class="results" id="resultsSpace">
+
+  </div>
   </div>
   <script src="app.js"></script>
 </body>
