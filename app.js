@@ -20,7 +20,7 @@ async function GetResults(value) {
     try {
 const response = await fetch(`https://fr.wikipedia.org/w/api.php?action=query&list=search&format=json&origin=*&srlimit=20&srsearch=${value}`);
 const Results = await response.json();
-PutToArray(Results.query.search)
+CheckResults(Results);
     }
     catch (error) {
 const Results = error;
@@ -59,4 +59,16 @@ const displayError = (e) => {
     const error = document.createElement("div");
     error.innerHTML = `<div class=error>Oups! Une erreur s'est produite, veuillez réessayer : ${e} </div>`;
         ResultSpace.appendChild(error);
+}
+
+const CheckResults = (e) => {
+    if(e.query.search.length === 0) {
+        Loader.style.display = "none";
+        const error = document.createElement("div");
+        error.innerHTML = `<div class=error>Oups! Il n'y a pas de resultats pour cette recherche.`;
+            ResultSpace.appendChild(error);
+    }
+    else {
+        PutToArray(e.query.search)
+    }
 }
