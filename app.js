@@ -62,10 +62,16 @@ const displayError = (e) => {
 }
 
 const CheckResults = (e) => {
-    if(e.query.search.length === 0) {
+    if(e.query.search.length === 0 && e.query.searchinfo.suggestion) {
         Loader.style.display = "none";
         const error = document.createElement("div");
         error.innerHTML = `<div class=error>Oups! Il n'y a pas de resultats pour cette recherche. Peut-être devriez vous essayer : ${e.query.searchinfo.suggestion}`;
+            ResultSpace.appendChild(error);
+    }
+    else if (e.query.search.length === 0 && !e.query.searchinfo.suggestion) {
+        Loader.style.display = "none";
+        const error = document.createElement("div");
+        error.innerHTML = `<div class=error>Oups! Il n'y a pas de resultats pour cette recherche.`;
             ResultSpace.appendChild(error);
     }
     else {
